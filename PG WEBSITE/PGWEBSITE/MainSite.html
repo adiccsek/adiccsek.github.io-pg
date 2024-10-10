@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pg weboldal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Elérhetőségek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="munkatarsaink.html">Munkatársaink</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dokumentumok</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gyermekvedelem.html">Gyermekvédelem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Büszkeségeink</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Galéria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="adatkezelesiTajekoztató.html">Adatkezelési Tájékoztató</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Felnőttképzés</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container StartingContent">
+        <div class="row">
+            <div class="col-md-6 MainText">
+                <p style="max-width:360px; font-size: 1.5em;">Kiskunfélegyházi Szent Benedek PG Két Tanítási Nyelvű Technikum és Kollégium</p>
+                <p class="Motto">"Ora et labora"</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Keresés" class="search-input">
+                    <button class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6 PictureDiv">
+                <img src="image-removebg-preview.png" class="MainImage" alt="Szent Benedek Kép">
+                <div class="Shadow"></div>
+            </div>
+        </div>
+
+        <div class="carousel mt-5">
+            <div class="slides">
+                <div class="slide" style="background-image: url(tortenet.jpg);">
+                    <div class="caption">
+                        <h1>Történet</h1>
+                        <p>Az iskolánk gazdag története.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url(verseny.jpg);">
+                    <div class="caption">
+                        <h1>Verseny</h1>
+                        <p>Az iskola eredményes versenyei.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('beiskolazas.jpg');">
+                    <div class="caption">
+                        <h1>Beiskolázás</h1>
+                        <p>Tudj meg többet a beiskolázásról.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="row mt-5 text-center">
+            <div class="col-md-6">
+                <img src="kreta_logo.png" alt="Kréta Kép" class="Secondpart-Pictures">
+            </div>
+            <div class="col-md-6">
+                <img src="logo150.png" alt="150 éves Kép" class="Secondpart-Pictures">
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5" style="height: 2px; background-color: blue;">
+
+    <div class="row text-center">
+        <div class="col-xl-7">
+          <table class="Videos-Table">
+            <tr>
+              <td><iframe width="621" height="349" src="https://www.youtube.com/embed/8OZE7YCJQQA" title="Informatika" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+            </tr>
+            <tr>
+              <td><iframe width="621" height="349" src="https://www.youtube.com/embed/qdCxj91S7RA" title="Gépészet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-xl-5 Percent-Div">
+            <img src="1_23-min.jpg" alt="150 éves Kép" class="Percent-Tax">
+            <br>
+            <button class="Tax-Buttons">Reach Out</button>
+            <button class="Tax-Buttons">Know More</button>
+        </div>
+    </div>
+    <h3 style="text-align: center;">Információk:</h3>
+    <div class="ScrollableDiv">
+      <p>2024. augusztus 29. <br><b>Kedves PG-s diákok!</b><br>Az alábbiakban tájékoztatlak benneteket a tanévkezdéssel kapcsolatban néhány fontos tudnivalóról.<br>Az első tanítási nap 2024.09.02-án (hétfő) lesz. A nap 8:10-től 12:40-ig fog tartani, melyet az osztályfőnökeitekkel fogtok eltölteni.<br>Az első tanítási napon 9 órakor kerül sor a tanévnyitó ünnepségre a 10. évfolyam szervezésében. Az ünnepségen hagyományainknak megfelelően ünneplőruha viselése kötelező. A tankönyvosztásra is az első napon kerül majd sor.<br>Kérem, hogy hozzátok magatokkal a bizonyítványotokat, a közösségi szolgálati naplót és az egybefüggő szakmai gyakorlat elvégzéséről szóló igazolást.<br>Az előző tanév végén, illetve a beiratkozás során leadott igénylés alapján már az első nap biztosítjuk az étkezést az igénylőknek.<br><br><b>Tisztelt Szülők!</b><br>Új diákjaink szüleit 2024. szeptember 9-én (hétfőn) 16 órától várjuk szülői értekezletre. A többi osztályban 2024. szeptember 10-én (kedden) 17 órától tartjuk az első szülői értekezletet.<br>A Szülői Szervezet tagjait 2024. szeptember 10-én (kedden) 16 órától várjuk megbeszélésre az iskola 2-es termébe.<br>Eredményes és élményekkel teli tanévet kívánok mindenkinek!<br>Rokolya Csaba<br>igazgató<br><br>2024. augusztus 27.<br><b>Tájékoztató a 2024/2025-ös tanév kollégiumi beköltözéshez</b><br><b>Tisztelt Szülő/Gondviselő!</b><br>A kollégiumi beköltözés időpontja 2024. 09. 01-én, vasárnap 14 órától 21 óráig lesz.<br>Kérjük, az új 9. évfolyamos kollégistáink 18 óráig költözzenek be, mivel a kollégiumi tájékoztató a szülők részére 18:15-kor fog kezdődni.<br>A következőket hozzák magukkal:<br>- lakat-pótkulcsokkal, névvel ellátva<br>- tisztálkodószerek, törölköző, papírzsebkendő<br>- evőeszköz, tányér, pohár (névvel ellátva)<br>- igény szerint saját ágynemű, huzat (a kollégium ágyneműt és huzatokat biztosít)<br>- ünneplő (fehér ing, sötét nadrág, lehetőség szerint nem sportcipő), illetve időszaknak megfelelő ruházat<br>- papucs<br>- tanszerek<br>- szekrénybe ruhaakasztók (vállfa)<br>- saját gyógyszerek, ha szükséges<br>- 2000 Ft kollégiumi pénz, valamint 8 000 Ft rongálási kaució (amit a tanulmányok befejezésekor vissza fog kapni a diák, ha nem történt rongálás)<br>- 09. 01-én, vasárnap, a beköltözés napján mindenki saját maga gondoskodik az étkezéséről. A kollégiumban biztosított első étkezés a hétfői reggeli.<br>- Az élelmiszerallergiások névvel ellátott ételtároló dobozokat, saját mosogatószivacsot hozzanak magukkal!<br>Együttműködésüket előre is köszönve, szeretettel várjuk kollégiumunkba gyermeküket!<br>a Kiskunfélegyházi Szent Benedek PG Két Tanítási Nyelvű Technikum és Kollégiumi dolgozói<br><br>2024. augusztus 22.<br><b>Gólyatábor</b><br>Szeretettel köszöntünk a Kiskunfélegyházi Szent Benedek PG Két Tanítási Nyelvű Technikum és Kollégium 9. évfolyamos tanulójaként!<br>augusztus 26-tól augusztus 28-ig bentlakásos Gólyatáborba hívunk Téged!<br>Célunk, hogy megismerd új osztálytársaidat, osztályfőnöködet, tanáraidat, az iskolát és a várost.<br>A gólyatábor helyszíne: Kiskunfélegyházi Szent Benedek PG Technikum<br>6100 Kiskunfélegyháza, Kossuth u. 24.<br>Érkezés és regisztráció: 2024. augusztus 26-án 7.30 – 9.45 között<br>Hazautazás: 2024. augusztus 28-án 15.00 órakor<br>A tábor költsége: 19.000 - Ft, amit érkezéskor készpénzben hozz magaddal (az összeg fedezi az étkezést, a szállást és a programok költségeit)<br>Ellátás és szállás: teljes ellátás első nap ebédtől utolsó nap ebédig<br>szállás az iskola II. emeleti kollégiumában<br>Hozz magaddal: kényelmes utcai ruházatot, sportruházatot, tisztálkodó felszerelést (tusfürdőt, törülközőt, papucsot), esőkabátot/esernyőt, külön tornacipőt a tornaterem használatához, írószert, jegyzetfüzetet, hátizsákot a tankönyveknek, kulacsot vagy újratölthető palackot, szükséges gyógyszereidet, diákigazolványt, TAJ kártyát, személyi igazolványt, minimális költőpénzt.<br><b>Várunk szeretettel!</b></p>
+  </div>
+
+    <footer class="Footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Szent Benedek Teknikum</h3>
+                    <p>2024 © PG. All Rights Reserved.</p>
+                </div>
+                <div class="row">
+                <div class="col-md-6">
+                    <h3>Kövessetek:</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-6">
+                    <h3>Elérhetőség:</h3>
+                    <ul>
+                        <li>+36 76 462 332</li>
+                        <li>titkarsag@szbi-pg.hu</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

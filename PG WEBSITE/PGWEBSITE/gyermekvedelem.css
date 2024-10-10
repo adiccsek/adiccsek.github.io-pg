@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+    --main-color: #3F486C;
+    --secondary-color: #002080;
+    --text-color: #00061A;
+    --text-color2: #ffffff;
+    --background-color: #ECF2F9;
+
+    --main-fontstyle:'Lora', serif;
+    --font-style: 'Playfair Display', serif;
+}
+body{
+    background-color: var(--background-color);
+    font-family: var(--main-fontstyle);
+}
+@media screen and (max-width: 991px) {
+    .navbar-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; 
+        text-align: center;
+      }
+      .navbar-nav {
+        width: 100%;
+      }
+      .navbar-brand {
+        margin: auto;
+    }
+    .MainText {
+        margin: 14%  auto;
+        text-align: center;
+        max-width: 360px;
+    }
+    .Secondpart-Pictures {
+       margin: 8%;
+      }
+}
+.navbar {
+    background-color: var(--main-color);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;   
+    opacity: 0.99;
+    top: 0;
+    margin: 0;
+}
+.nav-link {
+    color: var(--text-color2);
+}
+/*.nav-link:hover{
+    color: var(--text-color2); //Majd megnezzuk melyik a jobb
+}*/ 
+.nav-link:hover::after{
+    content: '';
+    display: block;
+    width: 0px;
+    height: 1.5px;
+    margin: auto;
+    background: var(--text-color2);
+    animation: slide 0.6s forwards;
+}
+@keyframes slide {
+    from {width: 0px;}
+    to {width: 75%; }
+}
+
+.navbar-brand {
+    color: var(--text-color2);
+    font-size: 1.8em;
+}
+.navbar-toggler {
+    color: var(--text-color2);
+    background-color: var(--text-color2);
+}
+
+
+h2{
+    font-size: 50px;
+    text-align: center;
+    color: rgb(102, 21, 21);
+}
+
+p{
+    color: rgb(102, 21, 21);
+    font-size: 20px;
+    text-align: justify;
+}
+
+#div1{
+    border:5px solid rgb(102, 21, 21);
+    border-radius: 10px;
+    width: 70%;
+    height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding: 10px;
+    z-index: 1001;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+td{
+    padding-bottom: 20px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pg weboldal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="gyermekvedelem.css">
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="MainSite.html">PG</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Elérhetőségek</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="munkatarsaink.html">Munkatársaink</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dokumentumok</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gyermekvedelem.html">Gyermekvédelem</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Büszkeségeink</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Galéria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="adatkezelesiTajekoztató.html">Adatkezelési Tájékoztató</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Felnőttképzés</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+      <div id="div1">
+        <h2>Gyermekvédelem</h2>
+        <p>
+            Kedves Diák!
+            Az iskolában aktívan működik a gyermekvedelmi rendszer annak érdekében, hogy minden diák jól és biztonságban érezze magát.
+            <br>
+            Az alábbi helyen esetleges panaszodat tudod név, vagy név nélkül benyújtani az iskola felé, hogy a probléma minél hamarabb meg legyen oldva.
+        </p>
+      </div>
+    </div>
+
+    <div>
+        <form action="" name="urlap" id="form"></form>
+        <table>
+            <tr>
+                <td>Név:</td>
+                <td><input type="text" name="nev" size="50"></td>
+            </tr>
+            <tr>
+                <td>Osztály:</td>
+                <td><input type="text" name="osztaly" size="50"></td>
+            </tr>
+            <tr cellspacing="2">
+                <td>E-mail: <span style="color: red;" >*</span></td>
+                <td><input type="text" name="email" size="50"></td>
+            </tr>
+            <tr>
+                <td>Telefon:</td>
+                <td><input type="text" name="telefon" size="50"></td>
+            </tr>
+            <tr>
+                <td>Bejelentési szöveg: <span style="color: red;">*</span></td>
+                <td><textarea name="beSzov" rows="10" cols="50" style="resize: none; width: 100%; height: 500px; padding: 5px; box-sizing: border-box;"></textarea></td>
+            </tr>
+        </table>
+        <div style="text-align: center; margin-top: 10px; padding-bottom: 30px;" >
+          <input type="button" value="Beküldés" onclick="bekuld()">
+        </div>
+    </div>
+
+
+    <script>
+      function bekuld(){
+        const emailregex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const emailInput = document.querySelector('input[name="email"]');
+        const beSzovInput = document.querySelector('input[name="beSzov"]');
+        if (emailInput.value === '') {
+            alert('Nincs email cím');
+        } else if (!emailregex.test(emailInput.value)) {
+            alert('Nem megfelelő az email cím');
+        } else if (beSzovInput.value === '') {
+            alert('Nincs indokolt szöveg');
+        } else {
+            document.querySelector('input[name="nev"]').value = '';
+            document.querySelector('input[name="osztaly"]').value = '';
+            emailInput.value = '';
+            document.querySelector('input[name="telefon"]').value = '';
+            beSzovInput.value = '';
+            alert('Sikeres beküldés!')
+        }
+      }
+    </script>
+</body>
+</html>
